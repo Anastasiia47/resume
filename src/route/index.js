@@ -5,11 +5,11 @@ const router = express.Router()
 
 var header= {
   name: {
-    firstname: 'Ivan',
+    firstname: 'Petro',
     lastname: 'Ivanov',
   },
   position: "Junior Fullstack JS Developer",
-  salary: "600$ в месяц",
+  salary: "800$ в месяц",
   address: "Украина",
   }
 
