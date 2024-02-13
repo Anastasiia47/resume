@@ -131,11 +131,31 @@
   <div>
     <h2>Tools:</h2>
   </div>
-
   <div>
     <ul>
-        <li class='badge text-bg-primary'>{{tools[0]}}</li>
-   </ul>
+      <li class='badge text-bg-primary'>{{tools.[0]}}</li>
+      <li class='badge text-bg-secondary'>{{tools.[1]}}</li>
+      <li class='badge text-bg-success'>{{tools.[2]}}</li>
+      <li class='badge text-bg-danger'>{{tools.[3]}}</li>
+      <li class='badge text-bg-warning'>{{tools.[4]}}</li>
+      <li class='badge text-bg-info'>{{tools.[5]}}</li>
+      <li class='badge text-bg-light'>{{tools.[6]}}</li>
+      <li class='badge text-bg-dark'>{{tools.[7]}}</li>
+
+     </ul>
+    </div>
+  </section>
+
+  <section>
+    <div>
+      <h2>Community:</h2>
+    </div>
+   <div>
+      <ul>
+        {{#each community}}
+          <li>{{name}}-{{type}}</li>
+        {{/each}}
+      </ul>
   </div>
 </section>
 
