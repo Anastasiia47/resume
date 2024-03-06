@@ -6,9 +6,9 @@
 <div>
     {{#with main}}
     <main>
-        <section>
+        <section class="m-4">
             {{>title data="All skills" big=true }} 
-       <ul>
+       <ul class="pt-2">
         {{#each skills}}
         <li>
            {{name}}
@@ -28,9 +28,9 @@
        </ul> 
     </section>
 
-    <section>
+    <section class="m-4">
         {{> title data= "My hobbies"  big=false}}
-        <ol>
+        <ol class="pt-2 ">
             {{#each hobbies}}
             <li>
                 {{name}} 
