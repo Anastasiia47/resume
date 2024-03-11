@@ -42,9 +42,7 @@
            <div class="nav nav-tabs">
                 {{#each tabs}}
                 <div class="nav-item  me-3 mb-1 mt-4">
-                   
-                     <a class="nav-link">{{text}} {{#if isActive}}<div class="active"></div>{{/if}}
-                    {{#if isDisabled}}<div class="disabled"></div>{{/if}}</a>
+                   <a class="nav-link {{#if isActive}}active{{/if}}{{#if isDisabled}}disabled{{/if}}">{{text}}</a>
                 </div>
                 {{/each}}
            </div>
@@ -109,18 +107,18 @@
 
     <hr>
 
-    <section>
-    
-            <div class="nav">
-                {{#each footer}}
-                <div class="nav-item">
-                    <a href={{link}} class="nav-link">{{text}}</a>
-                </div>
+   
+<section>
+     <div class="nav">
+         {{#each footer}}
+             <div class="nav-item col-2">
+                {{#each this}}
+                     <a href={{link}} class="nav-link {{#if @last}}disabled{{/if}}">{{text}}</a>
                 {{/each}}
-            </div>
-      
-    </section>
-
+             </div>
+         {{/each}}
+     </div>
+</section>
 
 </main>
 
