@@ -1036,13 +1036,13 @@ router.get('/shoporder', function (req, res) {
         { name: 'Клава', price: '25 000 ₴' },
       ],
       additional_info: [
-        { text: 'Всього товарів', value: '75 000 ₴' },
+        { text: 'Всього товарів', value: '75000 ₴' },
         { text: 'Купони', value: 'Немає' },
         { text: 'Доставка', value: 'Безкоштовно' },
       ],
       total_price: {
         text: 'Всього товарів',
-        value: '75 000 ₴',
+        value: '75000 ₴',
       },
       button: [
         {
