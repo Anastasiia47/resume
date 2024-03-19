@@ -1217,8 +1217,7 @@ router.get('/shoporder', function (req, res) {
         ],
       },
     },
-      ],
-    },
+
     footer: [
       [
         {
