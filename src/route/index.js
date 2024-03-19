@@ -954,13 +954,6 @@ router.get('/shoporder', function (req, res) {
   res.render('shoporder', {
     layout: 'basic',
 
-router.get('/shophome', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('shophome', {
-    layout: 'shop',
-
     navigation: {
       links: [
         {
@@ -1224,6 +1217,128 @@ router.get('/shophome', function (req, res) {
         ],
       },
     },
+      ],
+    },
+    footer: [
+      [
+        {
+          text: 'Home',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Trending',
+          link: 'https://www.youtube.com/feed/trending',
+        },
+        {
+          text: 'Subscriptions',
+          link: 'https://www.youtube.com/feed/subscriptions',
+        },
+        {
+          text: 'Library',
+          link: 'https://www.youtube.com/feed/library',
+        },
+      ],
+      [
+        {
+          text: 'History',
+          link: 'https://www.youtube.com/feed/history',
+        },
+        {
+          text: 'Your Videos',
+          link: 'https://www.youtube.com/feed/my_videos',
+        },
+        {
+          text: 'Live',
+          link: 'https://www.youtube.com/live',
+        },
+        {
+          text: 'Settings',
+          link: 'https://www.youtube.com/account',
+        },
+      ],
+      [
+        {
+          text: 'Watch Later',
+          link: 'https://www.youtube.com/playlist?list=WL',
+        },
+        {
+          text: 'Liked Videos',
+          link: 'https://www.youtube.com/playlist?list=LL',
+        },
+        {
+          text: 'Music',
+          link: 'https://www.youtube.com/music',
+        },
+        {
+          text: 'Gaming',
+          link: 'https://www.youtube.com/gaming',
+        },
+      ],
+      [
+        {
+          text: 'Sports',
+          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+        },
+        {
+          text: 'News',
+          link: 'https://www.youtube.com/news',
+        },
+        {
+          text: 'Fashion & Beauty',
+          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+        },
+        {
+          text: 'Learning',
+          link: 'https://www.youtube.com/learning',
+        },
+      ],
+      [
+        {
+          text: 'Report History',
+          link: 'https://www.youtube.com/feed/history/report_history',
+        },
+        {
+          text: 'Help',
+          link: 'https://support.google.com/youtube/?hl=en',
+        },
+        {
+          text: 'Send Feedback',
+          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+        },
+        {
+          text: 'About',
+          link: 'https://www.youtube.com/about/',
+        },
+      ],
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+
+// ================================================================
+
+             
+  router.get('/shophome', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('shophome', {
+    layout: 'shop', 
+     navigation: {
+      links: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
       ],
     },
 
