@@ -96,7 +96,34 @@
             </div>
             {{/with}}
 
+            <hr class="mt-5">
 
+            {{#with subscribe}}
+            <div class="card text-bg-secondary">
+                <h2 class="card-title ms-3">{{header}}</h2>
+                <div class="card-body">
+                    <p>{{description}}</p>
+                    {{#each buttons}}
+                    <div class="mb-3">
+                        <a class="btn btn-primary" href="{{link}}">{{text}}</a>
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+            {{/with}}
+
+            <hr class="mt-5">
+
+            <div class="nav">
+                {{#each footer}}
+                    <div class="nav-item col-2">
+                        {{#each this}}
+                            <a href={{link}} class="nav-link {{#if @last}}disabled{{/if}}">{{text}}</a>
+                        {{/each}}
+                    </div>
+                {{/each}}
+            </div>
+            
         </div>
     </div>
 </main>
