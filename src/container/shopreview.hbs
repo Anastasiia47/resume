@@ -59,16 +59,16 @@
                         {{text}}</a>
                     {{/each}}
                     {{/with}}
-                    
-                <hr class="mt-5">
+
+                    <hr class="mt-5">
                 </div>
 
 
                 <div class="col-4">
                     {{#with goodsInfo}}
                     <div class="card mb-3">
-                        <div class="col-3">
-                        <img class="card-img-top" src="{{photo}}" alt="photo">
+                        <div class="col-3 m-3">
+                            <img class="card-img-top" src="{{photo}}" alt="photo">
                         </div>
                         <div class="card-body">
                             <p>{{name}}</p>
@@ -79,11 +79,13 @@
                             <p>{{price}}</p>
                             <p>{{#if inMarket}}Є в наявності{{/if}}</p>
                             {{#each buttons}}
-                            <a href="{{link}}" class="btn
+                            <div>
+                                <a href="{{link}}" class="btn
                             {{#if isPrimary}}btn-primary{{/if}}
                             {{#if isSecondary}}btn-secondary{{/if}}
-                             mt-5 mb-2 me-1">
-                                {{text}}</a>
+                             mb-1">
+                                    {{text}}</a>
+                            </div>
                             {{/each}}
                         </div>
                     </div>
@@ -97,46 +99,55 @@
                 <div class="card-body">
                     {{#each reviewList}}
 
-                        <div class="card">
-                                <div class="card-header">
-                                    {{#with title}}
-                                         <p>{{userName}}</p>
-                                         <p>{{caption}}</p>
-                                         <p>{{date}}</p>
-                                    {{/with}}
-                                 </div>
+                    <div class="card mb-4">
+                        <div class="card-header">
+                            {{#with title}}
+                            <p>{{userName}}</p>
+                            <p>{{caption}}</p>
+                            <p>{{date}}</p>
+                            {{/with}}
+                        </div>
+                        <div class="card-body">
+                            {{#with reviewBody}}
+                            {{#with seller}}
+                            {{title}}: {{value}}
+                            {{/with}}
+                            <div class="mt-2">
+                                {{#with rating}}
+                                {{title}}: {{value}}
+                                {{/with}}
+                            </div>
+                            <div class="mt-3 mb-3">
+                                {{#each text}}
+                                {{this}}
+                                {{/each}}
+                            </div>
+                            <div class="mt-2">
+                                {{#with advantages}}
+                                {{title}}: {{text}}
+                                {{/with}}
+                            </div>
+                            <div class="mt-2">
+                                {{#with disadvantages}}
+                                {{title}}: {{text}}
+                                {{/with}}
+                            </div>
+                            {{#each coments}}
+                            <div class="card mb-2">
                                 <div class="card-body">
-                                    {{#with reviewBody}}
-                                        {{#with seller}}
-                                            {{title}}: {{value}}
-                                        {{/with}}
-                                        <div class="mt-2">
-                                            {{#with rating}}
-                                                {{title}}: {{value}}
-                                            {{/with}}
-                                        </div>
-                                        <div class="mt-3 mb-3">
-                                            {{#each text}}
-                                                {{this}}
-                                            {{/each}}
-                                        </div>
-                                        <div class="mt-2">
-                                            {{#with advantages}}
-                                                {{title}}: {{text}}
-                                            {{/with}}
-                                        </div>
-                                         <div class="mt-2">
-                                            {{#with disadvantages}}
-                                                {{title}}: {{text}}
-                                            {{/with}}
-                                        </div>
-                                    {{/with}}
-                                    </div>
-                               </div>
-                               
-                                    
-                          
-                              
+                                    <p>{{userName}}</p>
+                                    <p>{{date}}</p>
+                                    <p>{{text}}</p>
+                                </div>
+                            </div>
+                            {{/each}}
+                            {{/with}}
+                        </div>
+                    </div>
+
+
+
+
 
                     {{/each}}
                 </div>
